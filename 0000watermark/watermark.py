@@ -9,8 +9,8 @@ PIL.ImageDraw.Draw.text(xy, text, fill=None, font=None, anchor=None)
 
 from PIL import Image, ImageDraw, ImageFont
 
-original_avatar = 'pic.png'
-saved_avatar = 'new.png'
+original_avatar = 'pic.jpg'
+saved_avatar = 'new.jpg'
 windows_font = 'Arial.ttf'
 color = (255, 0, 0)
 
@@ -24,13 +24,13 @@ def draw_text(text, fill_color, windows_font):
         
         draw = ImageDraw.Draw(im)
         font = ImageFont.truetype(windows_font, 35)
-        draw.text((x-20, 7), text, fill_color, font)
+        draw.text((20, 7), text, fill_color, font)
         
         im.save(saved_avatar)
         im.show()
 
     except:
-        print "Unable to load image"
+        print "Error"
 
 if __name__ == "__main__":
     #number = str(raw_input('please input number: '))
